@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QRiva डाउनलोड करें - Google Play</title>
+<meta name="description" content="QRiva: QR कोड स्कैन करें, बनाएँ और प्रिंट करें। फ्री, ऑफलाइन। Google Play पर डाउनलोड करें।">
+<meta property="og:title" content="QRiva - QR Scanner, Creator & Label Printer">
+<meta property="og:description" content="QR कोड स्कैन करें, बनाएँ, डिज़ाइन करें और प्रिंट करें। फ्री और ऑफलाइन। Google Play पर उपलब्ध।">
+<meta property="og:image" content="https://nikilsuthar.github.io/get/icon.png">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#fff;
+ font-family:'Nirmala UI','Segoe UI',Roboto,Arial,sans-serif;background:linear-gradient(160deg,#3b2fc9,#6d3be0 60%,#8b46f0)}
+.card{max-width:420px;width:100%}
+img{width:120px;height:120px;border-radius:28px;box-shadow:0 14px 36px rgba(0,0,0,.35)}
+h1{font-size:40px;margin:18px 0 4px}
+p{opacity:.92;line-height:1.5;margin:6px 0}
+.btn{display:block;margin:16px 0 0;padding:18px 20px;border-radius:16px;font-size:20px;font-weight:700;text-decoration:none}
+.play{background:#fbbf24;color:#2a1b00}
+.web{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);color:#fff;font-size:17px;font-weight:600}
+.tip{display:none;margin-top:20px;background:rgba(0,0,0,.28);border-radius:14px;padding:14px;font-size:16px;line-height:1.5;text-align:left}
+small{display:block;margin-top:22px;opacity:.75}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="icon.png" alt="QRiva icon">
+  <h1>QRiva</h1>
+  <p>QR कोड स्कैन करें, बनाएँ और प्रिंट करें<br>फ्री • ऑफलाइन • कोई अकाउंट नहीं</p>
+  <a class="btn play" id="open" href="https://play.google.com/store/apps/details?id=com.nikhilsuthar.qriva">▶ Google Play से डाउनलोड करें</a>
+  <a class="btn web" id="market" href="market://details?id=com.nikhilsuthar.qriva">Play Store ऐप में खोलें</a>
+  <div class="tip" id="tip">
+    अगर ऊपर का बटन न खुले:<br>
+    1️⃣ ऊपर कोने में <b>⋮</b> (तीन डॉट) दबाइए<br>
+    2️⃣ <b>Open in browser / Chrome</b> चुनिए<br>
+    3️⃣ या Play Store में <b>"QRiva"</b> सर्च कीजिए
+  </div>
+  <small>Android 7.0 या उससे नया फोन चाहिए</small>
+</div>
+<script>
+(function(){
+  var ua = navigator.userAgent || '';
+  var inApp = /Instagram|FBAN|FBAV|FB_IAB|Line\/|Snapchat/i.test(ua);
+  var android = /Android/i.test(ua);
+  if (inApp) { document.getElementById('tip').style.display = 'block'; }
+  if (!android) { document.getElementById('market').style.display = 'none'; }
+  // In a normal browser go straight to the Play Store listing.
+  if (android && !inApp) { setTimeout(function(){ location.replace(document.getElementById('open').href); }, 400); }
+})();
+</script>
+</body>
+</html>
